@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大学路机灵的铠甲虾</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="page">
+  <div class="card">
+
+    <div class="logo">
+      <span class="shrimp">🦐</span>
+      <span class="title">铠甲虾</span>
+    </div>
+    <p class="subtitle">Battle.net Authenticator Tool</p>
+
+    <input id="password" type="password"
+      placeholder="访问密码 / Access Password">
+
+    <button class="btn primary" onclick="openLogin()">
+      登录 Battle.net / Login
+    </button>
+
+    <input id="url"
+      placeholder="粘贴登录后的 URL / Paste URL">
+
+    <button class="btn success" onclick="start()">
+      开始处理 / Start
+    </button>
+
+    <div class="result">
+      <label>Serial</label>
+      <div class="row">
+        <input id="serial" readonly>
+        <button class="btn purple" onclick="copyText('serial')">Copy</button>
+      </div>
+    </div>
+
+    <div class="result">
+      <label>Restore Code</label>
+      <div class="row">
+        <input id="restoreCode" readonly>
+        <button class="btn blue" onclick="copyText('restoreCode')">Copy</button>
+      </div>
+    </div>
+
+    <div class="result">
+      <label>Device Secret</label>
+      <div class="row">
+        <input id="deviceSecret" type="password" readonly>
+        <button class="btn warn" onclick="toggleSecret()">Show</button>
+        <button class="btn pink" onclick="copyText('deviceSecret')">Copy</button>
+      </div>
+    </div>
+
+    <button class="btn export" onclick="exportTxt()">
+      导出 TXT / Export
+    </button>
+
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
