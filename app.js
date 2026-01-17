@@ -1,5 +1,5 @@
 // 后端接口地址（稍后再改）
-const API_URL = 'https://你的后端地址/api/run';
+const API_URL = 'https://shrimp-backend.vercel.app/api/run';
 
 // 新开页登录 Battle.net
 function openLogin() {
